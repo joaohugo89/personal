@@ -1,6 +1,6 @@
 .plans {
-  padding: 6rem 5%;
-  background: #0d0d0d;
+  padding: 6rem 1.5rem;
+  background: linear-gradient(180deg, var(--color-background-secondary) 0%, var(--color-background) 100%);
 }
 
 .plans-container {
@@ -10,16 +10,16 @@
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text);
   margin: 0 0 4rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #E63946 0%, #ff6b6b 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -33,31 +33,27 @@
 }
 
 .plan-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 2.5rem;
   text-align: center;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
+  transition: all 200ms ease;
+  cursor: pointer;
   position: relative;
 }
 
-.plan-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .plan-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-primary);
 }
 
 .plan-card.popular {
-  background: rgba(230, 57, 70, 0.1);
-  border-color: rgba(230, 57, 70, 0.5);
+  background: rgba(249, 115, 22, 0.05);
+  border-color: var(--color-primary);
   transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(249, 115, 22, 0.15);
 }
 
 .plan-card.popular:hover {
@@ -69,7 +65,7 @@
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: #E63946;
+  background: var(--color-primary);
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
@@ -80,12 +76,12 @@
 }
 
 .plan-card h3 {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 600;
   margin: 0 0 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .plan-price {
@@ -93,16 +89,37 @@
 }
 
 .price {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #E63946;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
   display: block;
+  line-height: 1;
 }
 
 .period {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  color: var(--color-text-muted);
   display: block;
+  margin-top: 0.5rem;
+}
+
+
+.feature-icon {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+
+  color: #22c55e;
+
+  margin-top: 0.2rem;
+
+  flex-shrink: 0;
+  display: block;
+}
+
+.feature-text {
+  flex: 1;
 }
 
 .plan-features {
@@ -112,48 +129,49 @@
 }
 
 .plan-features li {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
-  line-height: 2;
-  padding: 0.5rem 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  padding: 0.5rem 0;
 }
 
-.feature-check {
-  color: #E63946;
-  font-weight: bold;
+.plan-features li svg {
+  flex-shrink: 0;
 }
 
 .btn-plan {
   display: inline-block;
-  padding: 1rem 2.5rem;
-  background: transparent;
+  padding: 0.875rem 2rem;
+  background: var(--color-primary);
   color: white;
-  border: 2px solid #E63946;
-  border-radius: 4px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 200ms ease;
   cursor: pointer;
 }
 
 .btn-plan:hover {
-  background: #E63946;
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
   transform: translateY(-2px);
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .plans {
-    padding: 4rem 5%;
+    padding: 4rem 1.5rem;
   }
 
   .section-title {
-    font-size: 2rem;
     margin-bottom: 3rem;
   }
 
@@ -167,10 +185,6 @@
   }
 
   .plan-card.popular:hover {
-    transform: translateY(-10px);
-  }
-
-  .price {
-    font-size: 2.5rem;
+    transform: translateY(-4px);
   }
 }

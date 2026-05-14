@@ -1,6 +1,6 @@
 .about {
-  padding: 6rem 5%;
-  background: #1a1a1a;
+  padding: 6rem 1.5rem;
+  background: linear-gradient(180deg, var(--color-background-secondary) 0%, var(--color-background) 100%);
 }
 
 .about-container {
@@ -10,16 +10,16 @@
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text);
   margin: 0 0 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #E63946 0%, #ff6b6b 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,8 +31,8 @@
 }
 
 .about-description {
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
   line-height: 1.8;
   margin-bottom: 3rem;
 }
@@ -48,7 +48,7 @@
   text-align: center;
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.5s ease;
+  transition: all 200ms ease;
 }
 
 .about-stat.visible {
@@ -56,29 +56,48 @@
   transform: translateY(0);
 }
 
+.stat-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(249, 115, 22, 0.1);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.stat-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
 .stat-number {
   display: block;
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #E63946;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-primary);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .about {
-    padding: 4rem 5%;
+    padding: 4rem 1.5rem;
   }
 
   .section-title {
-    font-size: 2rem;
     margin-bottom: 1.5rem;
   }
 
@@ -89,9 +108,5 @@
 
   .about-stats {
     gap: 2rem;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
   }
 }

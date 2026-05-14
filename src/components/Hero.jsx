@@ -29,16 +29,13 @@ const Hero = () => {
 
         <div className="hero-stats">
           <div className="stat" data-aos="fade-up" data-aos-delay="100">
-            <span>500+</span>
-            <span>Alunos</span>
+            <span>500+ Alunos</span>
           </div>
           <div className="stat" data-aos="fade-up" data-aos-delay="200">
-            <span>10</span>
-            <span>Anos</span>
+            <span>10 Anos</span>
           </div>
           <div className="stat" data-aos="fade-up" data-aos-delay="300">
-            <span>20</span>
-            <span>Modalidades</span>
+            <span>20 Modalidades</span>
           </div>
         </div>
       </div>

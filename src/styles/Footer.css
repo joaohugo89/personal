@@ -1,6 +1,6 @@
 .footer {
-  background: #0d0d0d;
-  padding: 4rem 5% 1rem;
+  background: var(--color-background);
+  padding: 4rem 1.5rem 1rem;
 }
 
 .footer-container {
@@ -13,11 +13,12 @@
 }
 
 .footer-section h3 {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
+  color: var(--color-text);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 1.5rem;
 }
 
@@ -32,18 +33,20 @@
 }
 
 .footer-section ul li a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 200ms ease;
+  display: block;
 }
 
 .footer-section ul li a:hover {
-  color: #E63946;
+  color: var(--color-primary);
+  padding-left: 8px;
 }
 
 .footer-logo p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
   line-height: 1.6;
   margin: 1rem 0;
 }
@@ -59,37 +62,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  color: white;
-  transition: all 0.3s ease;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  transition: all 200ms ease;
 }
 
 .social-links a:hover {
-  background: #E63946;
-  transform: translateY(-3px);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
 .social-links svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border);
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
   margin: 0;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .footer {
-    padding: 3rem 5% 1rem;
+    padding: 3rem 1.5rem 1rem;
   }
 
   .footer-container {
@@ -97,7 +103,7 @@
   }
 
   .footer-section h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .social-links {

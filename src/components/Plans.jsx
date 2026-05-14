@@ -37,13 +37,27 @@ const Plans = () => {
               </div>
 
               <ul className="plan-features">
-                {plan.features.map((feature, index) => (
-                  <li key={index}>
-                    <span className="feature-check">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+  {plan.features.map((feature, index) => (
+    <li key={index}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+        stroke="currentColor"
+        className="feature-icon"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4.5 12.75l6 6 9-13.5"
+        />
+      </svg>
+
+      <span>{feature}</span>
+    </li>
+  ))}
+</ul>
 
               <a href="#contact" className="btn btn-plan">
                 Escolher

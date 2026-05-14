@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Testimonials from './components/Testimonials';
 
 // Initialize AOS
 AOS.init({
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <Testimonials />
       <Plans />
       <About />
       <Contact />
