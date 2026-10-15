@@ -1,0 +1,56 @@
+/* ============================================================
+   THEME — ARQUIVO CENTRAL DE CUSTOMIZAÇÃO
+   ------------------------------------------------------------
+   Freelancer: altere SOMENTE este arquivo para reskinar o
+   template inteiro (cores, fontes, raios, espaçamentos, tempos).
+   ============================================================ */
+
+:root {
+  /* ---- CORES DE MARCA ---------------------------------- */
+  --c-accent:        #d4ff00;  /* verde-limão neon (destaque) */
+  --c-accent-soft:   #e8ff6b;
+  --c-accent-ink:    #0a0a0a;  /* texto sobre o accent        */
+
+  /* ---- SUPERFÍCIES ------------------------------------- */
+  --c-ink:           #0b0b0c;  /* preto principal             */
+  --c-ink-2:         #141416;  /* chumbo / cards escuros      */
+  --c-ink-3:         #1f2024;  /* bordas sobre escuro         */
+  --c-paper:         #f2f2ee;  /* off-white das seções claras */
+  --c-paper-2:       #e7e7e1;  /* cinza muito claro           */
+  --c-line:          #d3d3cb;  /* bordas sobre claro          */
+
+  /* ---- TEXTO ------------------------------------------- */
+  --c-text-dark:     #0b0b0c;
+  --c-text-muted:    #6c6c66;
+  --c-text-light:    #f6f6f2;
+  --c-text-light-mut:#9a9a93;
+
+  /* ---- TIPOGRAFIA -------------------------------------- */
+  --f-display: 'Anton', 'Arial Narrow', sans-serif;  /* títulos */
+  --f-body:    'Inter', system-ui, sans-serif;       /* textos  */
+  --fs-display: clamp(2.6rem, 6.2vw, 6rem);
+  --fs-h2:      clamp(2rem, 4.6vw, 4rem);
+  --fs-h3:      clamp(1.05rem, 1.5vw, 1.35rem);
+  --fs-body:    clamp(0.92rem, 1.05vw, 1rem);
+  --fs-small:    0.74rem;
+  --ls-eyebrow:  0.18em;
+
+  /* ---- FORMA E ESPAÇO ---------------------------------- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+  --gutter: clamp(1.25rem, 5vw, 5.5rem);
+  --stack:  clamp(1rem, 2vw, 1.75rem);
+  --header-h: 72px;
+  --demo-h: 36px;   /* altura da barra de aviso demonstrativo */
+
+  /* ---- MOVIMENTO (navegação horizontal) ----------------- */
+  --t-slide: 1s;                       /* duração do slide     */
+  --e-slide: cubic-bezier(.76,0,.24,1);/* easing do slide      */
+  --t-fast: .28s;
+
+  /* ---- SOMBRAS ----------------------------------------- */
+  --sh-card: 0 18px 50px -28px rgba(0,0,0,.45);
+  --sh-pop:  0 30px 70px -30px rgba(0,0,0,.7);
+}

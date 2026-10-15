@@ -10,10 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "aos": "^2.3.4",
+    "gsap": "^3.12.5",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "react-scroll": "^1.9.3"
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
